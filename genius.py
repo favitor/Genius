@@ -2,14 +2,14 @@ import lyricsgenius
 import pylast
 
 #The LastFM keys
-API_KEY= '24c6a83580684f02a7f98eff7fbfc24a'
-API_SECRET = '11e9b37aa5ca43b7a9d049af143c6123'
+API_KEY= ''
+API_SECRET = ''
 #The genius key
-genius = lyricsgenius.Genius("F7oI8L-wAKEwTuQmSOAl4K6aNrARtu3NMiZRwRa7mgdqeRAZBIxv2glvHsg_HcmN")
+genius = lyricsgenius.Genius("")
 
 #Your usename and password
-username = 'vitorfa'
-password_hash = pylast.md5('C@poeira07')
+username = 'username'
+password_hash = pylast.md5('password')
 
 #Access LastFm
 network = pylast.LastFMNetwork(api_key=API_KEY, api_secret=API_SECRET,
