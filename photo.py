@@ -1,8 +1,8 @@
 import pylast
 import urllib.request
 
-API_KEY= '24c6a83580684f02a7f98eff7fbfc24a'
-API_SECRET = '11e9b37aa5ca43b7a9d049af143c6123'
+API_KEY= ''
+API_SECRET = ''
 
 
 network = pylast.LastFMNetwork(api_key=API_KEY, api_secret=API_SECRET)
@@ -10,14 +10,16 @@ network = pylast.LastFMNetwork(api_key=API_KEY, api_secret=API_SECRET)
 
 user = network.get_authenticated_user();
 
-user = network.get_user("beingvalentine")
+user = network.get_user("username")
 image = user.get_image()
 
 print(image)
+#Save Url in txt file
 file2write=open("men.txt",'w')
 file2write.write(image)
 file2write.close()
 
+#Function to save image as png
 def dl_png(url, file_path, file_name):
 	full_path = file_path + file_name + '.png'
 	urllib.request.urlretrieve(url, full_path)
@@ -25,4 +27,4 @@ def dl_png(url, file_path, file_name):
 url = image
 file_name = 'men'
 
-dl_png(url,'c:/users/raujo/chords/', file_name)
+dl_png(url,'c:/', file_name)
